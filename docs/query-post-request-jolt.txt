@@ -1,0 +1,11 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "#hs_lastmodifieddate": "filterGroups[0].filters[0].propertyName",
+      "#BETWEEN": "filterGroups[0].filters[0].operator",
+      "toDate": "filterGroups[0].filters[0].highValue",
+      "fromDate": "filterGroups[0].filters[0].value"
+    }
+  }
+]

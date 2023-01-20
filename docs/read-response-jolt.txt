@@ -1,0 +1,12 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "&",
+      "*": "fields.&",
+      "properties": {
+        "*": "fields.&"
+      }
+    }
+  }
+]

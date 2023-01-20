@@ -1,0 +1,57 @@
+1) It has two data hosting regions: US and EU
+
+
+2) It has OAuth and Bearer Authentication modes.
+-----> No Risk
+
+
+3) Request and Response payloads are in JSON Format.
+-----> No Risk
+
+
+4) In the API Response, the close date property is not returning when called by record ID or all records.
+
+
+5) Metadata:
+	i) It has no project scope
+	ii) It has issue type scope like Companies, Contacts, Deals, Feedback Submissions, Line items, Products, Tickets, Quotes and Custom Objects.
+-----> No Risk
+
+
+6) Field Mapping:
+	i) There are standard fields published in the documentation.
+	ii) There are custom fields published in the documentation.
+-----> No Risk
+
+
+7) Date Format: It is quite tricky as the API response has ISO8601 Date Format but for querying the results the API Request should be in UNIX Time format.
+-----> No Risk
+
+
+8) API Configuration:
+	i) Query Modified Records:	POST	{{url}}/crm/v3/objects/tickets/search
+	ii) Read Record By ID:		GET	{{url}}/crm/v3/objects/tickets/999995626
+	iii) Create Record:		POST 	{{url}}/crm/v3/objects/tickets
+	iv) Update Record:		PATCH 	{{url}}/crm/v3/objects/tickets/999995626
+
+
+9) To create a ticket, subject and hs_pipeline_stage are required.
+
+
+10) Comments and Attachments are not doable for this UA due to api limitation.
+
+
+11) To create a deal, only deal name is required.
+
+
+12) To create a task, task subject and task timestamp is required.
+13) To get a task details we need to mention the required properties in the url.
+	also in the query modified tasks only id and lastmodified date fields are found in the response.
+
+
+14) To create a company, only name is required.
+
+
+15) To create a contact, either firstname or lastname or email is required.
+	- We cannot make a separate scheme for this contact entity as it has different modified datetime field.
+-----> Risk

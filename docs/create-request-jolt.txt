@@ -1,0 +1,19 @@
+[
+  {
+    "operation": "remove",
+    "spec": {
+      "fields": {
+        "Business Object": ""
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "fields": {
+        "*": "properties.&",
+        "#1": "properties.hs_pipeline_stage"
+      }
+    }
+  }
+]
